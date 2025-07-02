@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --default-width: 1200px;
+}
+
+body {
+    background-color: #000000;
+    background-image: url(images/AsianFoodBg2.png);
+}
+
+nav {
+    width: 100vw;
+    height: 80px;
+    background-color: #550700;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid goldenrod;
+    position: relative;
+
+}
+
+nav ul {
+    order: 2;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    font-size: 20pt;
+    display: block;
+    margin: 0 0 0 20px;
+    padding: 24px 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.opener {
+    width: var(--default-width);
+    background-color: #940700;
+    margin: 0 auto;
+    padding: 80px 200px 80px 200px;
+    border-left: 1px solid goldenrod;
+    border-right: 1px solid goldenrod;
+
+    h1 {
+        color: goldenrod;
+        font-size: 44px;
+        text-align: center;
+
+    }
+
+    p {
+        font-size: 1.7em;
+        color: linen;
+    }
+}
+
+.centerPhoto {
+    height: 480px;
+    width: var(--default-width);
+    background-image: url(images/asianfoodcenterphoto.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-left: 1px solid goldenrod;
+    border-right: 1px solid goldenrod;
+
+
+}
+
+footer {
+    width: var(--default-width);
+    background-color: #940700;
+    border: 1px solid goldenrod;
+    padding: 30px 30px 30px 40px;
+    text-align: left;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+        color: #fff;
+    }
+
+    img {
+        width: 100px
+    }
+}
+
+section {
+    width: var(--default-width);
+    background-color: #940700;
+    margin: 0 auto;
+    text-align: left;
+    padding: 30px 30px 30px 40px;
+    border-left: 1px solid goldenrod;
+    border-right: 1px solid goldenrod;
+
+
+    h1 {
+        font-family: serif;
+        font-size: 30pt;
+        color: linen;
+    }
+
+    p {
+        font-size: 1.5em;
+        color: linen;
+    }
+}
+
+.bestsellers-h2 {
+    margin: 0 auto;
+    color: goldenrod;
+    background-color: #940700;
+    width: var(--default-width);
+    text-align: center;
+    padding: 30px;
+    font-size: 32px;
+    border-left: 1px solid goldenrod;
+    border-right: 1px solid goldenrod;
+
+}
+
+.bestsellers-menu {
+    margin: 0 auto;
+    background-color: #940700;
+    width: var(--default-width);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-left: 1px solid goldenrod;
+    border-right: 1px solid goldenrod;
+
+
+    img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    h3 {
+        color: goldenrod;
+        font-size: 28px;
+        margin: 20px 140px 0px 10px;
+    }
+
+    p {
+        width: 200px;
+        margin: 20px 120px 0px 10px;
+        font-size: 18px;
+    }
+}
+
+@media(max-width:576px) {
+    .opener {
+        width: 100vw;
+        padding: 30px;
+        font-size: 24px;
+    }
+
+    section {
+        width: auto;
+    }
+
+    :root {
+        --default-width: auto;
+    }
+}
