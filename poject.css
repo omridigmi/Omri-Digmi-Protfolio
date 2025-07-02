@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main-: #7D8B8C
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F2F2F2;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    width: 1200px;
+    margin: 0 auto;
+    height: 50px;
+    background-color: #455759;
+}
+
+.topnav {
+    background-color: #223D40;
+    box-shadow: 1px 2px 4px 1px #455759(0, 0, 0, 0.1);
+}
+
+.topnav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav ul li {
+    margin: 0;
+}
+
+.topnav ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.topnav ul li a:hover {
+    background-color: #455759;
+    color: #F2F2F2;
+}
+
+.protagonist {
+    width: 1200px;
+    height: 800px;
+    background-color: var(--bg-main-);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.profile {
+    order: 1;
+    width: 300px;
+    text-align: left;
+    padding: 0 0 30px 60px;
+
+}
+
+.profile-about {
+    width: 600px;
+    text-align: center;
+    order: 2;
+    padding: 50px 0 40px 150px;
+
+    h1 {
+        text-align: left;
+        font-size: 20pt;
+        font-family: serif;
+
+
+    }
+
+    p {
+        font-size: 16pt;
+        text-align: left;
+        font-family: serif;
+    }
+
+
+}
+
+.social-bar {
+    width: 1200px;
+    height: 36px;
+    background-color: #223D40;
+    bottom: 440px;
+    position: absolute;
+    text-align: center;
+    padding: 3px 500px 3px 500px;
+    display: flex;
+    flex-direction: row;
+
+    a {
+        width: 30px;
+        margin: 0 auto;
+    }
+}
+
+section {
+    width: 1200px;
+    height: 600px;
+    background-color: var(--bg-main-);
+    margin: 0 auto;
+    padding: 150px 0px 0px 0px;
+
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.projects {
+    display: grid;
+}

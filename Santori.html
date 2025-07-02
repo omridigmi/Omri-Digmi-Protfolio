@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satori Asian Food</title>
+    <link rel="icon" href="images/AsianFoodLogo.png">
+
+    <style>
+        /* Color Theme Swatches in Hex */
+        .Asian-Royalty-1-hex {
+            color: #000000;
+        }
+
+        .Asian-Royalty-2-hex {
+            color: #940700;
+        }
+
+        .Asian-Royalty-3-hex {
+            color: #FFFFFF;
+        }
+
+        .Asian-Royalty-4-hex {
+            color: #2C0D1C;
+        }
+
+        .Asian-Royalty-5-hex {
+            color: #000000;
+        }
+
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            background-image: url(images/AsianFoodBg2.png);
+        }
+
+        nav {
+            width: 100vw;
+            height: 80px;
+            background-color: #550700;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid goldenrod;
+            position: relative;
+
+        }
+
+        nav ul {
+            order: 2;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0 auto;
+            padding: 0;
+
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            font-size: 20pt;
+            display: block;
+            margin: 0 0 0 20px;
+            padding: 24px 10px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        .opener {
+            width: 1200px;
+            background-color: #940700;
+            margin: 0 auto;
+            padding: 80px 200px 80px 200px;
+            border-left: 1px solid goldenrod;
+            border-right: 1px solid goldenrod;
+
+            h1 {
+                color: goldenrod;
+                font-size: 44px;
+                text-align: center;
+
+            }
+
+            p {
+                font-size: 1.7em;
+                color: linen;
+            }
+        }
+
+        .centerPhoto {
+            height: 480px;
+            width: 1200px;
+            background-image: url(images/asianfoodcenterphoto.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-left: 1px solid goldenrod;
+            border-right: 1px solid goldenrod;
+
+
+        }
+
+        footer {
+            width: 1200px;
+            background-color: #940700;
+            border: 1px solid goldenrod;
+            padding: 30px 30px 30px 40px;
+            text-align: left;
+            margin: 0 auto;
+            text-align: center;
+
+            p {
+                color: #fff;
+            }
+
+            img {
+                width: 100px
+            }
+        }
+
+        section {
+            width: 1200px;
+            background-color: #940700;
+            margin: 0 auto;
+            text-align: left;
+            padding: 30px 30px 30px 40px;
+            border-left: 1px solid goldenrod;
+            border-right: 1px solid goldenrod;
+
+
+            h1 {
+                font-family: serif;
+                font-size: 30pt;
+                color: linen;
+            }
+
+            p {
+                font-size: 1.5em;
+                color: linen;
+            }
+        }
+
+        .bestsellers-h2 {
+            margin: 0 auto;
+            color: goldenrod;
+            background-color: #940700;
+            width: 1200px;
+            text-align: center;
+            padding: 30px;
+            font-size: 32px;
+            border-left: 1px solid goldenrod;
+            border-right: 1px solid goldenrod;
+
+        }
+
+        .bestsellers-menu {
+            margin: 0 auto;
+            background-color: #940700;
+            width: 1200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-left: 1px solid goldenrod;
+            border-right: 1px solid goldenrod;
+
+
+            img {
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+
+            h3 {
+                color: goldenrod;
+                font-size: 28px;
+                margin: 20px 140px 0px 10px;
+            }
+
+            p {
+                width: 200px;
+                margin: 20px 120px 0px 10px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <img src="images/AsianFoodLogo.png" alt="">
+                <li>
+                    <a href="#">Ordres</a>
+                </li>
+                <li>
+                    <a href="#">Menu</a>
+                <li>
+                    <a href="#">Near By</a>
+                <li>
+                    <a href="#">Customer Service</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="opener">
+        <h1>Welcome to Satori A Modern Asian Dining Experience!</h1><br><br>
+        <p>Satori is an Asian fusion restaurant that brings together the bold flavors of the East with a contemporary
+            twist.
+            Located in the heart of the city, our menu is inspired by traditional dishes from Japan, Thailand, China,
+            and Vietnam —
+            all made with fresh ingredients and modern techniques.
+
+            Whether you're craving sushi rolls, spicy curries, or savory stir-fries, Satori offers a rich variety of
+            options to
+            satisfy every palate. Our warm and elegant atmosphere, combined with outstanding service and a carefully
+            curated
+            cocktail menu, makes every visit unforgettable.
+
+            Perfect for date nights, family dinners, or casual lunches — Satori invites you to taste Asia like never
+            before.</p>
+    </section>
+    <section class="centerPhoto">
+    </section>
+    <div class="bestsellers-h2">
+        <h2>Best Sallers Of Satori! </h2>
+    </div>
+    <section class="bestsellers-menu">
+        <div class="salmon">
+            <img src="images/grilledsalmonsalad.jpg" alt="">
+        </div>
+        <div>
+            <h3>Spacial Salmon Salad</h3>
+            <p>
+                Fresh salmon cubes, spicy mayo, avocado, cucumber, mixed greens, sesame seeds, scallions, and crispy
+                tempura flakes in
+                tangy dressing.
+            </p>
+        </div>
+        <div>
+            <img src="images/rainbownigiri.jpg" alt="">
+        </div>
+        <div>
+            <h3>Rainbow nigiri</h3>
+            <p>
+                Slices of salmon, tuna, yellowtail, and white fish served with avocado, cucumber, and daikon, offering
+                fresh, colorful flavors.
+            </p>
+        </div>
+    </section>
+    <section class="bestsellers-menu">
+        <div>
+            <img src="images/tunatattakiroll.jpg" alt="">
+        </div>
+        <div>
+            <h3>Tataki Tuna </h3>
+            <p>
+                Seared tuna slices served rare, topped with sesame, soy, and citrus ponzu. </p>
+        </div>
+        <div class="wok">
+            <img src="images/spacialwokl.jpg" alt="wok">
+        </div>
+        <div>
+            <h3>Spacial Wok </h3>
+            <p>
+                Udon noodles stir-fried with beef, vegetables, and egg in a rich, savory sauce — a special wok favorite.
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>Omri Digmi.Web Developer&copy; All rights reserved. <br>
+            Content and code on this site may not be copied or reused without permission.</p> <br>
+        <img src="images/Omri-Digmi-Web-Developer-logo.png" alt="">
+    </footer>
+
+
+
+</body>
+
+</html>
