@@ -4,6 +4,39 @@
     box-sizing: border-box;
 }
 
+@media(max-width:576px) {
+    .opener {
+        width: 100vw;
+        padding: 30px;
+        font-size: 24px;
+    }
+
+    body {
+        width: auto;
+    }
+
+    section {
+        width: auto;
+    }
+
+    :root {
+        --default-width: auto;
+    }
+
+    .centerPhoto {
+        width: auto;
+    }
+
+    .bestsellers-menu {
+        width: auto;
+        column-count: 1;
+    }
+
+    footer {
+        width: auto;
+    }
+}
+
 :root {
     --default-width: 1200px;
 }
@@ -20,7 +53,7 @@ nav {
     display: flex;
     flex-direction: row;
     border: 1px solid goldenrod;
-    position: relative;
+    position: fixed;
 
 }
 
@@ -137,6 +170,7 @@ section {
     border-left: 1px solid goldenrod;
     border-right: 1px solid goldenrod;
 
+
 }
 
 .bestsellers-menu {
@@ -148,6 +182,8 @@ section {
     justify-content: space-between;
     border-left: 1px solid goldenrod;
     border-right: 1px solid goldenrod;
+    column-count: 4;
+
 
 
     img {
@@ -170,18 +206,20 @@ section {
     }
 }
 
-@media(max-width:576px) {
-    .opener {
-        width: 100vw;
-        padding: 30px;
-        font-size: 24px;
-    }
+#upArrow {
 
-    section {
-        width: auto;
-    }
-
-    :root {
-        --default-width: auto;
-    }
+    width: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    background-color: #b30000;
+    color: white;
+    border: 2px solid goldenrod;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
 }
