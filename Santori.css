@@ -59,6 +59,7 @@ body {
 nav {
     width: 100vw;
     height: 80px;
+
     background-color: #550700;
     display: flex;
     flex-direction: row;
@@ -83,7 +84,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 20pt;
+    font-size: 1.4em;
     display: block;
     margin: 0 0 0 20px;
     padding: 24px 10px;
@@ -105,21 +106,24 @@ nav ul li a {
 
     h1 {
         color: goldenrod;
-        font-size: 44px;
+        font-size: 2.5em;
         text-align: center;
+        font-family: serif;
+
 
     }
 
     p {
-        font-size: 1.7em;
+        font-size: 1.6em;
         color: linen;
+        font-weight: lighter;
     }
 }
 
 .centerPhoto {
     height: 480px;
     width: var(--default-width);
-    background-image: url(images/asianfoodcenterphoto.jpg);
+    background-image: url(./images/Santori-food.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -163,12 +167,13 @@ section {
     h1 {
         padding: 40px 0 0 0;
         font-family: serif;
-        font-size: 30pt;
+        font-size: 2em;
         color: linen;
+        font-weight: lighter;
     }
 
     p {
-        font-size: 1.5em;
+        font-size: 1.6em;
         color: linen;
     }
 }
@@ -180,9 +185,11 @@ section {
     width: var(--default-width);
     text-align: center;
     padding: 30px;
-    font-size: 32px;
+    font-size: 2em;
     border-left: 1px solid goldenrod;
     border-right: 1px solid goldenrod;
+    font-weight: lighter;
+    font-family: serif;
 
 
 }
@@ -212,14 +219,14 @@ section {
 
     h3 {
         color: goldenrod;
-        font-size: 28px;
+        font-size: 1.6em;
         margin: 20px 140px 0px 10px;
     }
 
     p {
         width: 200px;
         margin: 20px 120px 0px 10px;
-        font-size: 18px;
+        font-size: 1.2em;
     }
 }
 
