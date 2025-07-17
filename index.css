@@ -5,63 +5,152 @@
 }
 
 body {
-    background: #d3c8c8;
+    background-color: var(--bg-color);
+
+    color: var(--text-color);
 }
 
 :root {
     --main-width: 1200px;
+    --bg-color: #d3c8cd;
+    --text-color: #fafafa;
+    --header-bg: #82b5e0;
+    --sec-color: #5781b2;
+    --item-color: #4a6a92;
+}
+
+
+[data-theme="dark"] {
+    --main-width: 1200px;
+    --bg-color: #1b1a1d;
+    --text-color: #f0f0f0;
+    --header-bg: #305c7d;
+    --sec-color: #4a6a92;
+    --item-color: #ccc;
+}
+
+#footer {
+    display: flex;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--item-color);
+    color: var(--text-color);
+    position: absolute;
+
+    p {
+        margin: 0 auto;
+        color: #fff;
+    }
+
+    img {
+        width: 120px
+    }
+}
+
+#upArrow {
+
+    width: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    background-color: var(--item-color);
+    color: var();
+    border: 1px solid var(--item-color);
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
 }
 
 nav {
     width: 100vw;
     height: 80px;
-    background: linear-gradient(90deg, #82b5e0 0%, #d3c8c8 50%, #5781b2 100%);
+    background: linear-gradient(90deg, var(--header-bg) 0%, var(--bg-color) 50%, var(--sec-color) 100%);
     display: flex;
-
+    justify-content: space-between;
+    flex-direction: column;
+    display: block;
 }
 
 nav ul {
-    order: 2;
-    color: #fafafa;
+    color: var(--text-color);
     display: flex;
+    list-style: none;
     justify-content: center;
     list-style: none;
     margin: 0 auto;
-}
-
-nav ul img {
-    width: 160px;
-    height: 50px;
-    margin: 15px 100px;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 50px auto;
+    margin: 30px 50px auto;
 
     :hover {
-        color: black;
+        color: var(--text-color);
         transition: color 0.3s;
         animation: hoverColor 0.3s forwards;
     }
 }
 
 nav ul li a {
-    font-size: 1.2em;
     display: block;
-    padding: 24px 10px;
+    font-size: 1.2em;
     text-decoration: none;
-    color: #fafafa;
+    color: var(--text-color);
     font-weight: bold;
     transition: background-color 0.2s;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+nav ul li:hover {
+    padding: 4px;
+    color: var(--header-bg);
+    transform: scale(1.15) rotate(-3deg);
+    background: linear-gradient(90deg, var(--sec-color) 0%, var(--header-bg) 100%);
+    box-shadow: 0 4px 20px 0 var(--sec-color);
+    transition:
+        color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 20px;
+}
+
+
+
+.logo {
+    position: absolute;
+    width: 120px;
+    margin: 20px 0 auto;
+    left: 20%;
+}
+
 .hamburger {
     font-size: 1.8em;
-    color: #fafafa;
+    color: var(--text-color);
     width: 500px;
     padding-left: 15px;
     display: none;
+}
+
+button {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: background-color 0.2s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: transparent;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-color);
 }
 
 hr {
@@ -74,11 +163,11 @@ hr {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     width: var(--main-width);
-    background-color: #d3c8c8;
+    background-color: var(--bg-color);
     margin: 0 auto;
     padding-top: 50px;
     text-align: center;
-    color: #fafafa;
+    color: var(--text-color);
 
     img {
         grid-column: 1 / 2;
@@ -131,7 +220,7 @@ hr {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background-color: #d3c8c8;
+    background-color: var(--bg-color);
     width: var(--main-width);
     margin: 0 auto;
     padding: 20px 50px;
@@ -140,12 +229,12 @@ hr {
     align-items: left;
 
     img {
-        height: 200px;
+        width: 90%;
         align-self: start;
     }
 
     h2 {
-        color: #fafafa;
+        color: var(--text-color);
         font-size: 2em;
         margin-bottom: 20px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -162,7 +251,7 @@ hr {
         border: 1px solid rgba(255, 255, 255, 0.18);
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         column-count: 2;
 
 
@@ -178,16 +267,18 @@ hr {
             text-align: center;
             text-align: left;
             font-size: 1.2em;
-            color: #fff;
+            color: var(--text-color);
         }
     }
+
+    .santori {}
 }
 
 .my-skills {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background-color: #5781b2;
+    background-color: var(--sec-color);
     width: var(--main-width);
     margin: 0 auto;
     padding: 20px 50px;
@@ -196,7 +287,7 @@ hr {
     align-items: left;
 
     h2 {
-        color: #fafafa;
+        color: var(--text-color);
         font-size: 2em;
         margin-bottom: 20px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -208,7 +299,7 @@ hr {
 
         li {
             font-size: 1.2em;
-            color: #fff;
+            color: var(--text-color);
             margin-bottom: 10px;
         }
     }
@@ -216,56 +307,57 @@ hr {
 
 @media (max-width:576px) {
     :root {
-        --main-width: 576px;
+        --main-width: 100vw;
+        --bg-color: #d3c8cd;
+        --text-color: #fafafa;
+        --header-bg: #82b5e0;
+        --sec-color: #5781b2;
+        --item-color: #4a6a92;
+        --p-fsize: 0.8em;
     }
 
-    nav .hamburger {
-        width: var(--main-width);
-        display: block;
-        position: fixed;
-        color: #000;
-        font-weight: bold;
-        z-index: 100;
-
+    [data-theme="dark"] {
+        --bg-color: #1b1a1d;
+        --text-color: #f0f0f0;
+        --header-bg: #305c7d;
+        --sec-color: #4a6a92;
+        --item-color: #ccc;
     }
 
-    nav ul {
-        flex-direction: column;
-        margin-left: 456px;
-        z-index: 99;
-        position: fixed;
 
+    #footer {
+        width: 100vw;
+        padding: 10px;
+        text-align: center;
+        position: absolute;
+        height: auto;
 
-    }
-
-    nav ul li {
-        padding: 0;
-        margin: 0;
-        width: 120px;
-        background-color: transparent;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-
+        P {
+            font-size: var(--p-fsize);
+        }
 
         img {
-
-            display: none;
-            margin: 0;
-            width: 100%;
-            margin-top: 0;
-            margin-bottom: 26px;
-            align-items: center;
+            width: 120px;
         }
     }
 
-    nav ul li a {
+    #upArrow {
+        margin: 0 auto;
+        position: fixed;
+        bottom: 100px;
+        right: 10px;
+        width: 30px;
+    }
 
-        width: 30%;
-        padding-bottom: 5px;
-        ;
+    nav,
+    .hamburger {
+        width: var(--main-width);
+        color: var(--item-color);
+        font-weight: bold;
+        display: block;
 
     }
+
 
     nav .hamburger+ul {
         display: none;
@@ -277,38 +369,69 @@ hr {
 
 
 
+    .logo {
+        margin: 0 auto;
+
+    }
+
+    nav ul {
+        padding: 10px 2px;
+        position: absolute;
+        flex-direction: column;
+        z-index: 99;
+
+
+    }
+
+    nav ul li {
+        clear: none;
+        padding: 0;
+        margin: 0;
+        width: 120px;
+        background-color: transparent;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+    }
+
+    nav ul li a {
+
+        width: 30%;
+        padding-bottom: 5px;
+
+    }
+
+
+
     header.hero {
-        width: 576px;
+        width: var(--main-width);
         text-align: center;
         display: flex;
         flex-direction: column;
         padding: 100px 0 0 0px;
 
 
+        h1 {
+            font-size: 1em;
+        }
+
         main {
-            width: 576px;
+            width: var(--main-width);
             display: flex;
             flex-direction: column;
             align-items: center;
-
-            h1 {
-                font-size: 2.5em;
-            }
-
-            p {
-
-                font-size: 1.2em;
-            }
+            font-size: 1em;
         }
     }
 
     header {
-        width: 576px;
+        width: var(--main-width);
 
     }
 
     .social {
-        width: 576px;
+        width: var(--main-width);
         padding: 20px 10px;
         display: flex;
         flex-direction: row;
@@ -322,7 +445,7 @@ hr {
     }
 
     .my-skills {
-        width: 576px;
+        width: var(--main-width);
         padding: 20px 10px;
 
         h2 {
@@ -332,12 +455,12 @@ hr {
     }
 
     #my-projects {
-        width: 576px;
+        width: var(--main-width);
         padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #d3c8c8;
+        background-color: var(--bg-color);
         margin: 0 auto;
 
 
@@ -347,7 +470,7 @@ hr {
         }
 
         section {
-            width: 576px;
+            width: var(--main-width);
             padding: 0;
         }
 
@@ -360,7 +483,8 @@ hr {
         }
 
         .project-item {
-            width: 500px;
+            margin: 0 auto;
+            width: 90%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -376,7 +500,7 @@ hr {
             }
 
             img {
-                width: 400px;
+                width: 100%;
                 margin: 0 auto;
                 margin-top: 10px;
                 border-radius: 10px;

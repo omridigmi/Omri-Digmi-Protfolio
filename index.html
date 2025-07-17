@@ -10,11 +10,14 @@
 </head>
 
 <body>
+    <aside><a href="#top"><img src="images/arrow-up-icon-png-29.jpg" id="upArrow" alt="top button"></a></aside>
 
     <nav>
+
+        <img src="images/Omri-Digmi-Web-Developer-logo.png" alt="logo" class="logo ">
         <div class="hamburger">&#9776;</div>
         <ul>
-            <li><img src="images/Omri-Digmi-Web-Developer-logo.png" alt="logo"></li>
+
             <li>
                 <a href="./#my-projects">Projects</a>
             </li>
@@ -25,12 +28,14 @@
             <li>
                 <a href="#">About</a>
             </li>
-
+            <li>
+                <button id="theme-toggle">🌙 Dark Mode</button>
+            </li>
         </ul>
     </nav>
     <header class="hero">
         <div>
-            <img src="images/protagonist.jpg" alt="Me">
+            <img src="images/protagonist.jpg" alt="Me"">
             <h1>Hi I AM Omri!</h1>
         </div>
         <main>
@@ -51,7 +56,7 @@
                 grow.
             </p>
         </main>
-        <div class="social">
+        <div class=" social">
             <a href="mailto:omridig48@gmail.com" target="_blank" aria-label="Email">
                 <img src=" images/7123953_logo_google_g_icon.svg" alt="Email" />
             </a>
@@ -84,9 +89,8 @@
                     </p>
                 </div>
 
-                <img src="./images/Santori-scs.png" alt="Santori asian restaurant" loading="lazy"><img
-                    src="./images/Santori-scs2.png" alt="Santori asian restaurant" loading="lazy">
-
+                <img src="./images/Santori-scs.png" alt="Santori asian restaurant" loading="lazy"><img>
+                <img src="./images/Santori-scs2.png" alt="Santori asian restaurant" loading="lazy"><img>
 
             </div>
             <br>
@@ -107,10 +111,12 @@
             <div class="project-item">
                 <div>
                     <a href="./Shukipedia.html" target="_blank" style="color: orange;">Shukipedia</a>
-                    <p>I designed Shukipedia as an educational platform for learning about finance and the stock market.
+                    <p>I designed Shukipedia as an educational platform for learning about finance and the stock
+                        market.
                         The
                         design emphasizes
-                        clarity, structured content, and easy navigation. I focused on creating a user-friendly learning
+                        clarity, structured content, and easy navigation. I focused on creating a user-friendly
+                        learning
                         environment with
                         readable typography, organized layouts, and interactive elements to help users understand
                         complex
@@ -120,8 +126,23 @@
                 <img src="./images/Shukipedia-scs.png" alt="Shukipedia finance site" loading="lazy">
             </div>
         </div>
-
     </section>
+    <footer id="footer">
+        <img src="images/Omri-Digmi-Web-Developer-logo.png" alt="">
+        <p>Omri Digmi.Web Developer&copy; All rights reserved. <br>
+            Content and code on this site may not be copied or reused without permission.</p> <br>
+
+    </footer>
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            toggleButton.textContent = newTheme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode';
+        });
+    </script>
 </body>
 
 </html>
