@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omri Digmi Web Developer</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="images/OmriDigmiLOgoClear.png">
+    <link rel="icon" href="images/OmriDigmiLOgoClear.png" alt="omri digmi web developer logo">
 </head>
 
 <body>
@@ -14,10 +14,12 @@
 
     <nav>
 
-        <img src="images/Omri-Digmi-Web-Developer-logo.png" alt="logo" class="logo ">
-        <div class="hamburger">&#9776;</div>
-        <ul>
+        <img src="images/Omri-Digmi-Web-Developer-logo.png" alt="logo" class="omri digmi web developer logo">
 
+        <input type="checkbox" id="hamburger" hidden>
+        <label class="hamburger-label" for="hamburger">&#9776;</label>
+        </input>
+        <ul>
             <li>
                 <a href="./#my-projects">Projects</a>
             </li>
@@ -34,11 +36,11 @@
         </ul>
     </nav>
     <header class="hero">
-        <div>
-            <img src="images/protagonist.jpg" alt="Me"">
-            <h1>Hi I AM Omri!</h1>
+        <div class="color-box">
+            <img src="images/protagonist.jpg" alt="Me">
         </div>
         <main>
+            <h1>Hi I AM Omri!</h1>
             <p>
                 I'm a Full Stack developer from Petah Tikva, Israel, currently building <br> my skills and experience in
                 modern web
@@ -57,17 +59,40 @@
             </p>
         </main>
         <div class=" social">
-            <a href="mailto:omridig48@gmail.com" target="_blank" aria-label="Email">
+            <a href="mailto:omridig48@gmail.com" target="_blank" aria-label="Email" rel="noreferrer" rel=" noopener">
                 <img src=" images/7123953_logo_google_g_icon.svg" alt="Email" />
             </a>
-            <a href="https://instagram.com/omri_digmi5" target="_blank" aria-label="Instagram">
-                <img src="./images/5296765_camera_instagram_instagram logo_icon.svg" Instagram" />
+            <a href="https://instagram.com/omri_digmi5" target="_blank" aria-label="Instagram" rel="noreferrer"
+                rel=" noopener">
+                <img src="./images/[CITYPNG.COM]HD Official Outline Instagram IG Logo Icon PNG - 2000x2000.png"
+                    alt="Instagram" />
+            </a>
+            <a href="https://github.com/omridigmi" target="_blank" aria-label="Github" rel="noreferrer" rel=" noopener">
+                <img src="./images/Github.png" alt="github">
             </a>
         </div>
+
     </header>
     <hr>
     <section class="my-skills">
-        <h2>My Skills</h2>
+        <h2 class="skills-title"> My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card html">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <img src="./images/html5-logo.png" alt="html 5 logo">
+            </div>
+            <div class="skill-card css">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+                <img src="./images/css3-logo.png" alt="css 3 logo">
+            </div>
+            <div class="skill-card js">
+                <i class="fab fa-js-square"></i>
+                <h3>JavaScript</h3>
+                <img src="./images/JavaScript-logo.png" alt="javascript logo">
+            </div>
+        </div>
     </section>
     <section id="my-projects">
         <h2>My Projects</h2>
@@ -128,7 +153,7 @@
         </div>
     </section>
     <footer id="footer">
-        <img src="images/Omri-Digmi-Web-Developer-logo.png" alt="">
+        <img src="images/Omri-Digmi-Web-Developer-logo.png" alt="omri digmi web developer">
         <p>Omri Digmi.Web Developer&copy; All rights reserved. <br>
             Content and code on this site may not be copied or reused without permission.</p> <br>
 
@@ -144,5 +169,6 @@
         });
     </script>
 </body>
+
 
 </html>
