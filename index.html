@@ -30,14 +30,20 @@
             <li>
                 <a href="#">About</a>
             </li>
-            <li>
-                <button id="theme-toggle">🌙 Dark Mode</button>
-            </li>
+            <li><label class="switch" title="Toggle dark mode">
+                    <input type="checkbox" id="theme-toggle-slider">
+                    <span class="slider">
+                        <span class="icon moon">🌙</span>
+                        <span class="icon sun">☀️</span>
+                    </span>
+                </label></li>
         </ul>
     </nav>
     <header class="hero">
         <div class="color-box">
+            <img src="./images/mePortret.jpeg" alt="me">
             <img src="images/protagonist.jpg" alt="Me">
+            <img src="./images/ME1.jpeg" alt="me">
         </div>
         <main>
             <h1>Hi I AM Omri!</h1>
@@ -112,11 +118,15 @@
                         reservations, menus, and
                         customer engagement.
                     </p>
+                    <div>
+                        <img src="./images/Santori-scs.png" alt="Santori asian restaurant" loading="lazy">
+                        <img src="./images/Santori-scs2.png" alt="Santori asian restaurant" loading="lazy">
+                    </div>
                 </div>
-
-                <img src="./images/Santori-scs.png" alt="Santori asian restaurant" loading="lazy"><img>
-                <img src="./images/Santori-scs2.png" alt="Santori asian restaurant" loading="lazy"><img>
-
+                <div>
+                    <input type="button" name="2code" value="CODE>" rel="noopener" rel="noreferrer"
+                        onclick="window.open('https://github.com/omridigmi/Omri-Digmi-Protfolio/blob/main/Santori.html', '_blank');">
+                </div>
             </div>
             <br>
             <div class="project-item">
@@ -131,11 +141,15 @@
                         conversions and engagement effectively.</p>
                 </div>
                 <img src="./images/Salesmen-scs.png" alt="Salesmen landing page" loading="lazy">
+                <div>
+                    <input type="button" name="2code" value="CODE>" rel="noopener" rel="noreferrer"
+                        onclick="window.open('https://github.com/omridigmi/Omri-Digmi-Protfolio/blob/main/SalesMan.html', '_blank');">
+                </div>
             </div>
-            <br>
+
             <div class="project-item">
                 <div>
-                    <a href="https://omridigmi.github.io/Shokipedia/" target="_blank" rel="noopener" rel="noreferrer"
+                    <a href="https://omridigmi.github.io/Shokipedia/" target="_blank" rel="noopener noreferrer"
                         style="color: orange;">Shukipedia</a>
                     <p>I designed Shukipedia as an educational platform for learning about finance and the stock
                         market.
@@ -150,8 +164,13 @@
                         ease.</p>
                 </div>
                 <img src="./images/Shukipedia-scs.png" alt="Shukipedia finance site" loading="lazy">
+                <div>
+                    <input type="button" name="2code" value="CODE>" rel="noopener noreferrer"
+                        onclick="window.open('https://github.com/omridigmi/Shokipedia', '_blank');">
+                </div>
             </div>
         </div>
+    </section>
     </section>
     <footer id="footer">
         <img src="images/Omri-Digmi-Web-Developer-logo.png" alt="omri digmi web developer">
@@ -160,13 +179,17 @@
 
     </footer>
     <script>
-        const toggleButton = document.getElementById('theme-toggle');
-        toggleButton.addEventListener('click', () => {
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleInput = document.getElementById('theme-toggle-slider');
             const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            toggleButton.textContent = newTheme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode';
+            // Set initial state
+            if (html.getAttribute('data-theme') === 'dark') {
+                toggleInput.checked = true;
+            }
+            toggleInput.addEventListener('change', function () {
+                const newTheme = this.checked ? 'dark' : 'light';
+                html.setAttribute('data-theme', newTheme);
+            });
         });
     </script>
 </body>
