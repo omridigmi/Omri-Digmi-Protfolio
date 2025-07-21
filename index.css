@@ -17,13 +17,24 @@ body {
 :root {
     --p-fsize: 1.2em;
     --main-width: 1200px;
-    --bg-color: #d3c8cd;
+    /* --bg-color: #d3c8cd;
     --text-color: #1b1b1b;
     --header-bg: #82b5e0;
     --sec-color: #5781b2;
     --item-color: #4a6a92;
-    --card-color: #2c527e;
+    --card-color: #2c527e; */
     --h1-fsize: 3em;
+    --bg-color: #f5f7fa;
+    /* Soft light background */
+    --text-color: #2a2e35;
+    /* Dark gray for text */
+    --header-bg: #3f88c5;
+    /* Cool blue for headers/nav */
+    --sec-color: #65aedd;
+    /* Lighter blue for accents */
+    --item-color: #e2e8f0;
+    /* Light gray for cards/items */
+    --card-color: #ffffff;
     --h3-fsize: 2em;
 }
 
@@ -45,7 +56,7 @@ body {
     text-align: center;
     color: var(--text-color);
     position: absolute;
-    background: linear-gradient(90deg, var(--header-bg) 0%, var(--bg-color) 50%, var(--sec-color) 100%);
+    background: linear-gradient(135deg, #355c7d 0%, #6c5b7b 50%, #c06c84 100%);
 
     p {
         margin: 0 auto;
@@ -78,10 +89,12 @@ body {
 nav {
     width: 100vw;
     height: 80px;
-    background: linear-gradient(90deg, var(--header-bg) 0%, var(--bg-color) 50%, var(--sec-color) 100%);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    color: var(--text-color);
+
+    background: linear-gradient(135deg, #355c7d 0%, #6c5b7b 50%, #c06c84 100%);
     display: block;
 }
 
@@ -259,6 +272,9 @@ hr {
 }
 
 .hero {
+    border-left: 4px solid #355c7d;
+    border-right: 4px solid #c06c84;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     width: var(--main-width);
@@ -348,6 +364,8 @@ main {
 }
 
 #my-projects {
+    border-left: 4px solid #355c7d;
+    border-right: 4px solid #c06c84;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -430,7 +448,7 @@ input:focus {
 }
 
 .my-skills {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    background: linear-gradient(135deg, #355c7d 0%, #6c5b7b 50%, #c06c84 100%);
     backdrop-filter: blur(10px);
     background-color: var(--sec-color);
     width: var(--main-width);
@@ -438,7 +456,6 @@ input:focus {
     padding: 20px 0;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(90deg, var(--header-bg) 0%, var(--bg-color) 50%, var(--sec-color) 100%);
 
     h2 {
         color: var(--text-color);
@@ -508,7 +525,7 @@ input:focus {
 }
 
 
-@media (max-width:576px) {
+@media (max-width:860px) {
     :root {
         --main-width: 100vw;
         --bg-color: #d3c8cd;
@@ -727,7 +744,7 @@ input:focus {
     }
 }
 
-@media (min-width: 576px) and (max-width: 1024px) {
+@media (min-width: 860px) and (max-width: 1440px) {
     :root {
         --main-width: 100vw;
         --bg-color: #d3c8cd;
@@ -827,7 +844,7 @@ input:focus {
     }
 
     .color-box {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 10px;
     }
