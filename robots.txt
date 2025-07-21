@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://omridigmi.github.io/Omri-Digmi-Protfolio/sitemap.xml
